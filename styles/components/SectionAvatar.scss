@@ -1,0 +1,16 @@
+.avatar-home{
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+    @media (max-width:868px) {
+        margin-top: -8vh;
+    }
+    .image{
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
+    }
+
+}
