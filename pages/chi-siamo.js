@@ -15,12 +15,13 @@ function about() {
   })
 },[])*/
   return (
-    <div className="chi-siamo-wrapper">
-        <div className="chi-siamo-image" data-scroll-section data-scroll>
+    <div className="chi-siamo-wrapper" data-scroll-section>
+        <div className="chi-siamo-image"  >
     <img src={"/images/avatar1.jpeg"} className="chi-siamo-img"  />
+
         </div>
 
-      <div className="chi-siamo-text" data-scroll-section data-scroll>
+      <div className="chi-siamo-text" >
         Dolor excepteur elit velit id voluptate labore tempor ut adipisicing.
         Amet sit dolore in amet anim duis eiusmod non qui ipsum do cillum.
         Ullamco reprehenderit incididunt deserunt mollit deserunt eiusmod est

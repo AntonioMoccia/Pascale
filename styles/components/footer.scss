@@ -1,0 +1,33 @@
+.footer-wrapper{
+    width: 100vw;
+    height: 30vh;
+    background-color: inherit;
+    z-index: 10;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width:1023px) {
+        margin-top: 5vh;
+        height: 20vh;
+    }
+    .social{
+        height: 40%;
+        width: 10%;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @media screen and (max-width:1023px) {
+            width: 100vw;
+            padding: 0% 30%;
+        }
+        .facebook,.instagram{
+            color:white;
+            font-size: 30px;
+            @media screen and (max-width:1023px) {
+                font-size:40px;
+            }
+        }
+    }
+}

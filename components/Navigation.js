@@ -86,7 +86,7 @@ useEffect(()=>{
   if(scroll.isReady){    
     scroll.scroll.on("scroll",(istance)=>{
       if(!isMobile){
-      if(Math.round(istance.scroll.y)===0){            
+      if(Math.round(istance.scroll.y)!==0){            
               gsap.to(".navigation-wrapper",{
                 marginTop:'0%',
                 width:"100%",

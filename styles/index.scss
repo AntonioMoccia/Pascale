@@ -1,28 +1,37 @@
-@import './pages/home.scss';
 
 @import './components/navigation.scss';
 @import './components/RotatingText.scss';
 @import './components/SectionAvatar.scss';
+@import './components/cursor.scss';
+@import './components/footer.scss';
+
+@import './pages/home.scss';
 @import './pages/chi-siamo.scss';
-@import './pages/contattaci.scss';
 @import './pages/prodotti.scss';
+@import './pages/contattaci.scss';
+
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: grabbing;
 }
+
 main{
 
 }
 .section{
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     overflow: hidden;
+    @media (max-width:1023px) {
+        height: 50vh;
+    }
 }
 body{
     background-color: rgb(34, 14, 11);

@@ -5,12 +5,22 @@
     width: 100%;
     overflow: hidden;
     @media (max-width:868px) {
-        margin-top: -8vh;
+        margin-top: 0vh;
     }
-    .image{
+    .avatar-home-image{
+        @media (max-width:1023px) {
+            height: auto;
+            width: 90vw;
+        }
+    }
+ /*    .image{
         border-style: solid;
         border-color: black;
-        border-width: 2px;
-    }
+        border-width: 0px;
+        @media (max-width:1023px) {
+            height: auto;
+            width: 90vw;
+        }
+    } */
 
 }

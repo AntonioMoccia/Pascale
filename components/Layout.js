@@ -4,18 +4,64 @@ import Navigation from "./Navigation";
 import gsap from "gsap";
 import useResizer from '../hooks/useResizer'
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import Cursor from './cursor'
+import Footer from "./Footer";
+
+
 function Layout({ children }) {
   const containerRef = useRef(null);
-  const {asPath} = useRouter();
+  const {asPath,events} = useRouter();
   const [scroll,setScroll] = useState(true)
   const [isFixed,setIsFixed] = useState(true)
   const {isMobile} = useResizer()
   const [loco,setLoco] = useState(null)
 
-
+/* useEffect(()=>{
+  if(isMobile){
+    document.querySelector('.cursor').style.display='none'
+  }else{
+    document.querySelector('.cursor').style.display=''
+    
+  }
+},[isMobile]) */
   useEffect(()=>{
-  
-  })
+    if(typeof window == "undefined") return
+    window.addEventListener('mousemove',(e)=>{
+   //   console.log(e.toElement);
+      gsap.to('.cursor',{
+        y:e.clientY,
+        x:e.clientX
+      })
+    })
+
+        
+    events.on("routeChangeStart",()=>{
+      //console.log(isMobile);
+
+      if(window.innerWidth>1023){
+        document.body.style.opacity=0
+      }else{
+        
+        
+      }
+
+ /*      gsap.to('body',{
+        opacity:0
+      }) */
+    })
+    events.on("routeChangeComplete",()=>{
+      if(window.innerWidth>1023){
+        gsap.to('body',{
+          alpha:1,
+          duration:1.5,
+          delay:0.5
+        })
+      }else{
+
+      }
+    })
+    
+  },[])
 
 
   return (
@@ -23,7 +69,8 @@ function Layout({ children }) {
 <LocomotiveScrollProvider
       options={{
         smooth: true,
-        lerp: 0.1,
+        lerp: 0.06,
+        multiplier:1,
         scrollFromAnywhere: true,
         reloadOnContextChange: true,
         tablet: { smooth: true },
@@ -45,16 +92,17 @@ function Layout({ children }) {
         }
       }}
     >
-
+<Cursor />
 <Navigation />
 <main>
 
       <div ref={containerRef} data-scroll-container>
         {children}
+      <Footer />
       </div>
 </main>
-    </LocomotiveScrollProvider>
 
+    </LocomotiveScrollProvider>
 </>    
 
   );

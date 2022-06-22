@@ -6,11 +6,12 @@
   justify-content: space-around;
   align-items: center;
   position: fixed;
-  z-index: 2;
+  z-index: 1;
 
   .logo{
     img{
       width: 75px;
+      z-index: 4;
     }
     @media screen and (max-width:1023px) {
       z-index: 2;
@@ -21,7 +22,7 @@
     transform: translateY(0);
     align-items: center;
     .navigation-list{
-      width: 70%;
+      width: 80%;
       display: flex;
       justify-content: space-between;
       margin:0 25%;
@@ -31,7 +32,11 @@
           text-transform: uppercase;
           color: white;
           cursor: pointer;
-          @media screen and (max-width:1023px) {
+          z-index: 5;
+          span,div{
+            z-index: 5;
+          }
+                    @media screen and (max-width:1023px) {
             overflow: hidden;
             color: rgb(34, 14, 11);
             span{
