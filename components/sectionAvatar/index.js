@@ -5,7 +5,7 @@ function Index({image,...props}){
 
     return(
         
-        <div className='avatar-home' data-scroll data-scroll-speed="-3">
+        <div className='avatar-home' data-scroll data-scroll-speed="-1">
               <Image className='avatar-home-image' width={500} height={300} src={'/images/avatar1.jpeg'}  />
         </div>
         

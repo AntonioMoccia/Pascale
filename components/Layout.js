@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import Menu from './Menu'
 import { useRouter } from "next/router";
 import Navigation from "./Navigation";
 import gsap from "gsap";

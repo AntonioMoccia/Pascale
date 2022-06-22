@@ -10,7 +10,7 @@
 
   .logo{
     img{
-      width: 50px;
+      width: 75px;
     }
     @media screen and (max-width:1023px) {
       z-index: 2;
@@ -35,7 +35,7 @@
             overflow: hidden;
             color: rgb(34, 14, 11);
             span{
-              font-size: 3rem;
+              font-size: 10vw;
               overflow: hidden;
               }
           }

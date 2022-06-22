@@ -4,7 +4,7 @@ import { FaBeer } from "react-icons/fa";
 //service_8lx7bt6
 import emailjs from "@emailjs/browser";
 
-function Contattaci() {
+function contattaci() {
   /*     const templateParams = {
         name: 'James',
         notes: 'Check this out!'
@@ -83,4 +83,4 @@ function Contattaci() {
   );
 }
 
-export default Contattaci;
+export default contattaci;

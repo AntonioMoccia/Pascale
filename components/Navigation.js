@@ -127,7 +127,7 @@ useEffect(()=>{
                 <MenuItem>Chi siamo</MenuItem>
               </li>
             </Link>
-            <Link href="/chi-siamo" className="navigation-link">
+            <Link href="/prodotti" className="navigation-link">
               <li className="navigation-item">
                 <MenuItem>Prodotti</MenuItem>
               </li>

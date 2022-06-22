@@ -1,8 +1,5 @@
-import { useEffect } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import SectionAvatar from "../components/sectionAvatar";
-import SectionHome from "../components/SectionHome";
 
 export default function Home() {
   return (
@@ -37,7 +34,7 @@ export default function Home() {
       </div>
       <div className="section-footer" data-scroll-section>
         <p className="section-footer-text"  data-scroll>
-          Ciao sono antonio moccia
+          Aute cillum excepteur excepteur magna enim deserunt velit aute commodo adipisicing.
         </p>
       </div>
     </>

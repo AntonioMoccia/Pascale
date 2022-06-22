@@ -1,0 +1,85 @@
+.prodotti-wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 12rem;
+    align-items: flex-start;
+    @media screen and (max-width:1023px) {
+        align-items: center;
+    }
+    img{
+        max-width: 50vw;
+        height: auto;
+        border-radius: 25px;
+        @media screen and (max-width:1023px) {
+            max-width: 90vw;
+            }
+    }
+    .prodotto{
+        display: flex;
+        padding:0% 10%;
+        @media screen and (max-width:1023px) {
+            flex-direction: column;
+            }
+        &:not(:first-child){
+            margin-top: 20vh;
+        }
+        .prodotto-title{
+            color:white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position:relative;
+            left:-7vw;
+            letter-spacing: 5px;
+            @media screen and (max-width:1023px) {
+                left:0;
+                }
+            h1{ 
+                font-size: 5em;
+                font-weight: 200;
+                height: 100%;
+                @media screen and (max-width:1023px) {
+                    text-align: center;
+                    font-size: 3em;
+                    }
+            }
+        }
+    }
+    .prodotto-reverse{
+        @extend .prodotto;
+        display: flex;
+        padding:0% 10%;
+        flex-direction: row-reverse;
+        @media screen and (max-width:1023px) {
+            left:0;
+            flex-direction: column;
+            }
+        &:not(:first-child){
+            margin-top: 20vh;
+        }
+        .prodotto-title{
+            color:white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position:relative;
+            left:7vw;
+            letter-spacing: 5px;
+            @media screen and (max-width:1023px) {
+                left:0;
+                
+                }
+            h1{ 
+                font-size: 5em;
+                text-align: right;
+                font-weight: 200;
+                height: 100%;
+                @media screen and (max-width:1023px) {
+                    text-align: center;
+                    font-size: 3em;
+                    }
+            }
+        }
+    }
+}
