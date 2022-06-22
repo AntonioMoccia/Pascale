@@ -23,7 +23,7 @@ function Contattaci() {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_dni1ubt",
+        "service_8lx7bt6",
         "template_d4jofju",
         form.current,
         "user_UdXUyuJokIsW4SyplhL0Q"
