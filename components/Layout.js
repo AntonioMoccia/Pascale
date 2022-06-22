@@ -2,21 +2,20 @@ import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import Navigation from "./Navigation";
 import gsap from "gsap";
-import useResizer from '../hooks/useResizer'
+import useResizer from "../hooks/useResizer";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
-import Cursor from './cursor'
+import Cursor from "./cursor";
 import Footer from "./Footer";
-
 
 function Layout({ children }) {
   const containerRef = useRef(null);
-  const {asPath,events} = useRouter();
-  const [scroll,setScroll] = useState(true)
-  const [isFixed,setIsFixed] = useState(true)
-  const {isMobile} = useResizer()
-  const [loco,setLoco] = useState(null)
+  const { asPath, events } = useRouter();
+  const [scroll, setScroll] = useState(true);
+  const [isFixed, setIsFixed] = useState(true);
+  const { isMobile } = useResizer();
+  const [loco, setLoco] = useState(null);
 
-/* useEffect(()=>{
+  /* useEffect(()=>{
   if(isMobile){
     document.querySelector('.cursor').style.display='none'
   }else{
@@ -24,92 +23,82 @@ function Layout({ children }) {
     
   }
 },[isMobile]) */
-  useEffect(()=>{
-    if(typeof window == "undefined") return
-    window.addEventListener('mousemove',(e)=>{
-   //   console.log(e.toElement);
-      gsap.to('.cursor',{
-        y:e.clientY,
-        x:e.clientX
-      })
-    })
+  useEffect(() => {
+    if (typeof window == "undefined") return;
+    window.addEventListener("mousemove", (e) => {
+      //   console.log(e.toElement);
+      gsap.to(".cursor", {
+        y: e.clientY,
+        x: e.clientX,
+      });
+    });
 
-        
-    events.on("routeChangeStart",()=>{
+    events.on("routeChangeStart", () => {
       //console.log(isMobile);
 
-      if(window.innerWidth>1023){
-        document.body.style.opacity=0
-      }else{
-        
-        
+      if (window.innerWidth > 1023) {
+        document.body.style.opacity = 0;
+      } else {
       }
 
- /*      gsap.to('body',{
+      /*      gsap.to('body',{
         opacity:0
       }) */
-    })
-    events.on("routeChangeComplete",()=>{
-      if(window.innerWidth>1023){
-        gsap.to('body',{
-          alpha:1,
-          duration:1.5,
-          delay:0.5
-        })
-      }else{
-
+    });
+    events.on("routeChangeComplete", () => {
+      if (window.innerWidth > 1023) {
+        gsap.to("body", {
+          alpha: 1,
+          duration: 1.5,
+          delay: 0.5,
+        });
+      } else {
       }
-    })
-    
-  },[])
-
+    });
+  }, []);
 
   return (
-<>
-<LocomotiveScrollProvider
-      options={{
-        smooth: true,
-        lerp: 0.06,
-        multiplier:1,
-        scrollFromAnywhere: true,
-        reloadOnContextChange: true,
-        tablet: { smooth: true },
-        smartphone: { smooth: true },
-      }}
-      watch={["router.asPath"]}
-      location={asPath}
-      containerRef={containerRef}
-      onLocationChange={(scroll) => {
-        scroll.scrollTo(0, { duration: 0, disableLerp: true });
-        document.querySelectorAll(".c-scrollbar")[0].style.display = "none";
-  //        scroll.start();
-        //        router.reload(window.location.pathname)
-      }} // If you want to reset the scroll position to 0 for example
-      onUpdate={(scroll) => {
-        const el = document.querySelectorAll(".c-scrollbar");
-        if (el.length > 0) {
-          el[0].style.display = "none";
-        }
-      }}
-    >
-<Cursor />
-<Navigation />
-<main>
-
-      <div ref={containerRef} data-scroll-container>
-        {children}
-      <Footer />
-      </div>
-</main>
-
-    </LocomotiveScrollProvider>
-</>    
-
+    <>
+      <LocomotiveScrollProvider
+        options={{
+          smooth: true,
+          lerp: 0.06,
+          multiplier: 1,
+          scrollFromAnywhere: true,
+          reloadOnContextChange: true,
+          tablet: { smooth: true, lerp: 0.06, multiplier: 1 },
+          smartphone: { smooth: true, lerp: 0.06, multiplier: 1 },
+        }}
+        watch={["router.asPath"]}
+        location={asPath}
+        containerRef={containerRef}
+        onLocationChange={(scroll) => {
+          scroll.scrollTo(0, { duration: 0, disableLerp: true });
+          document.querySelectorAll(".c-scrollbar")[0].style.display = "none";
+          //        scroll.start();
+          //        router.reload(window.location.pathname)
+        }} // If you want to reset the scroll position to 0 for example
+        onUpdate={(scroll) => {
+          const el = document.querySelectorAll(".c-scrollbar");
+          if (el.length > 0) {
+            el[0].style.display = "none";
+          }
+        }}
+      >
+        <Cursor />
+        <Navigation />
+        <main>
+          <div ref={containerRef} data-scroll-container>
+            {children}
+            <Footer />
+          </div>
+        </main>
+      </LocomotiveScrollProvider>
+    </>
   );
 }
 
 export default Layout;
-
 
 /* 
 const InitScrolling=()=>{
