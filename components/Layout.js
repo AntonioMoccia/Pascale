@@ -62,12 +62,12 @@ function Layout({ children }) {
       <LocomotiveScrollProvider
         options={{
           smooth: true,
-          lerp: 0.06,
-          multiplier: 1,
+          lerp: 0.09,
+          multiplier:1.5,
           scrollFromAnywhere: true,
           reloadOnContextChange: true,
-          tablet: { smooth: true, lerp: 0.06, multiplier: 1 },
-          smartphone: { smooth: true, lerp: 0.06, multiplier: 1 },
+          tablet: { smooth: true  },
+          smartphone: { smooth: true },
         }}
         watch={["router.asPath"]}
         location={asPath}
