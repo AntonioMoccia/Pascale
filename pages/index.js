@@ -17,7 +17,10 @@ export default function Home({data}) {
 
   return (
     <>
-    
+     <Head>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <title>Pascale Castagne</title>
+    </Head>
     <div className="home-wrapper" data-scroll-section>
       <video
               id="video-hero-id"
