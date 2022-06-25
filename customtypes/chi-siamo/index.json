@@ -1,0 +1,43 @@
+{
+  "id": "chi-siamo",
+  "label": "chi-siamo",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "immagine": {
+        "type": "Image",
+        "config": {
+          "label": "Immagine",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "testo": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Testo",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      }
+    },
+    "Seo": {
+      "metatitle": {
+        "type": "Text",
+        "config": {
+          "label": "Metatitle",
+          "placeholder": ""
+        }
+      },
+      "metadescription": {
+        "type": "Text",
+        "config": {
+          "label": "Metadescription",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "contattaci",
+  "label": "contattaci",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "tel": {
+        "type": "Text",
+        "config": {
+          "label": "Tel",
+          "placeholder": ""
+        }
+      },
+      "email": {
+        "type": "Text",
+        "config": {
+          "label": "Email",
+          "placeholder": ""
+        }
+      },
+      "piva": {
+        "type": "Text",
+        "config": {
+          "label": "Piva",
+          "placeholder": ""
+        }
+      }
+    },
+    "Seo": {
+      "metatitle": {
+        "type": "Text",
+        "config": {
+          "label": "Metatitle",
+          "placeholder": ""
+        }
+      },
+      "metadescription": {
+        "type": "Text",
+        "config": {
+          "label": "Metadescription",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

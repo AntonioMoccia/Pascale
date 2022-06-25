@@ -1,10 +1,24 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { FaBeer } from "react-icons/fa";
-
+import {AiOutlineMail} from 'react-icons/ai'
+import {BsFillTelephoneFill} from 'react-icons/bs'
 //service_8lx7bt6
 import emailjs from "@emailjs/browser";
+import {client} from '../prismic'
 
-function Contattaci() {
+export async function getServerSideProps(){
+  const data = await client.getByType("contattaci")
+
+  return{
+    props:{
+      data:data.results[0].data
+    }
+  }
+}
+
+
+
+function Contattaci({data}) {
   /*     const templateParams = {
         name: 'James',
         notes: 'Check this out!'
@@ -16,6 +30,8 @@ function Contattaci() {
         }, (err) => {
            console.log('FAILED...', err);
         });*/
+
+
 
   const form = useRef();
 
@@ -30,7 +46,7 @@ function Contattaci() {
       )
       .then(
         (result) => {
-          console.log(result);
+
         },
         (error) => {}
       );
@@ -44,26 +60,26 @@ function Contattaci() {
       <div className="contatti-container">
         <div className="contatto">
           <div className="contatto-icona">
-            <FaBeer />
+            <BsFillTelephoneFill />
           </div>
           <div className="contatto-text">
-            <p>3926235194</p>
+              <p>{data.tel}</p>
           </div>
         </div>
         <div className="contatto">
           <div className="contatto-icona">
-            <FaBeer />
+            <AiOutlineMail />
           </div>
           <div className="contatto-text">
-            <p>3926235194</p>
+            <p>{data.email}</p>
           </div>
         </div>
         <div className="contatto">
           <div className="contatto-icona">
-            <FaBeer />
+            PI
           </div>
           <div className="contatto-text">
-            <p>3926235194</p>
+  <p>{data.piva}</p>
           </div>
         </div>
         <form onSubmit={sendEmail} ref={form} className="form-contatti">

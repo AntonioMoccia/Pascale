@@ -4,11 +4,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media screen and (max-width:1023px) {
+        padding-top: 7rem;
+    }
     .chi-siamo-image{
         
         img{
             width: 50vw;
            height: auto;
+           @media screen and (max-width:1023px) {
+            width: 80vw;
+        }
         }
     }
     .chi-siamo-text{

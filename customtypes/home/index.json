@@ -1,0 +1,49 @@
+{
+  "id": "home",
+  "label": "home",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "video": {
+        "type": "Link",
+        "config": {
+          "label": "Video",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "avatar": {
+        "type": "Image",
+        "config": {
+          "label": "Avatar",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "frase": {
+        "type": "Text",
+        "config": {
+          "label": "Frase",
+          "placeholder": ""
+        }
+      }
+    },
+    "Seo": {
+      "metatitle": {
+        "type": "Text",
+        "config": {
+          "label": "Metatitle",
+          "placeholder": ""
+        }
+      },
+      "metadescription": {
+        "type": "Text",
+        "config": {
+          "label": "Metadescription",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

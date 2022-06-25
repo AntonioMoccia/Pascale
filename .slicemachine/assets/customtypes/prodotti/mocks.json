@@ -1,0 +1,26 @@
+{
+  "id": "51921db6-23ba-40a7-9ffe-da468b01a11c",
+  "uid": "alias-provident-quo",
+  "type": "prodotti",
+  "data": {
+    "title": "incentivize leading-edge technologies",
+    "img": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=900&h=500&fit=crop"
+    },
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Cillum aliquip anim amet amet ullamco magna anim. Ut consequat voluptate Lorem ullamco mollit et velit laborum nisi aute nulla id dolor laboris. Commodo tempor nostrud aliqua laborum consectetur ut do cillum irure.",
+        "spans": []
+      }
+    ],
+    "metatitle": "harness bleeding-edge architectures",
+    "metadescription": "grow scalable vortals"
+  }
+}

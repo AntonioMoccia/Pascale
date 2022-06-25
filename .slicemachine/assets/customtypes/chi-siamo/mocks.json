@@ -1,0 +1,25 @@
+{
+  "id": "711d23a2-4746-4e0a-a002-30384492c0e5",
+  "uid": "vero-enim-aut",
+  "type": "chi-siamo",
+  "data": {
+    "immagine": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51?w=900&h=500&fit=crop"
+    },
+    "testo": [
+      {
+        "type": "paragraph",
+        "text": "Lorem mollit commodo aliquip tempor ea pariatur cillum incididunt veniam quis nisi. Pariatur enim et culpa. Reprehenderit non et minim excepteur magna.",
+        "spans": []
+      }
+    ],
+    "metatitle": "transition cutting-edge portals",
+    "metadescription": "synthesize end-to-end platforms"
+  }
+}

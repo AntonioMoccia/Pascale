@@ -1,0 +1,23 @@
+{
+  "id": "29447f51-e714-4e64-b83b-4fe23161c2e3",
+  "uid": "non-dolorem-aut",
+  "type": "home",
+  "data": {
+    "video": {
+      "link_type": "Web",
+      "url": "http://google.com"
+    },
+    "avatar": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=900&h=500&fit=crop"
+    },
+    "frase": "monetize enterprise relationships",
+    "metatitle": "leverage transparent experiences",
+    "metadescription": "reinvent bleeding-edge experiences"
+  }
+}

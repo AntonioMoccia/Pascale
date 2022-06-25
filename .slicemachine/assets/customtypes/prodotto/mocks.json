@@ -1,0 +1,27 @@
+{
+  "id": "a24d37a9-0afa-45b9-a7ff-abd9e597becb",
+  "uid": "hic-sequi-aut",
+  "type": "prodotto",
+  "data": {
+    "image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
+    },
+    "title": "generate value-added bandwidth",
+    "hasDescription": true,
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Occaecat nostrud occaecat dolore anim sint nostrud labore eiusmod commodo consequat aute labore. Esse anim aute eu ad consequat laboris consectetur. Laborum Lorem labore laborum.",
+        "spans": []
+      }
+    ],
+    "metatitle": "innovate wireless initiatives",
+    "metadescription": "incubate wireless synergies"
+  }
+}

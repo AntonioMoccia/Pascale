@@ -1,0 +1,22 @@
+{
+  "_cts": {
+    "home": {},
+    "chi-siamo": {},
+    "contattaci": {},
+    "prodotto": {},
+    "prodotti": {},
+    "social": {}
+  },
+  "slices": {
+    "Prodotto": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Product": {
+      "default": {
+        "items": {}
+      }
+    }
+  }
+}

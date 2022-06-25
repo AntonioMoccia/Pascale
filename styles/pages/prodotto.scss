@@ -1,0 +1,29 @@
+.prodotto-wrapper{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    padding-top: 10rem;
+    align-items: center;
+    .prodotto-image{
+        width: 50vw;
+        height: auto;
+        @media screen and (max-width:1023px) {
+             width: 90vw;
+         }
+    }
+    .prodotto-title{
+        margin-top: 5%;
+        color: white;
+        font-size: 4.5vw;
+    }
+    .prodotto-description{
+        margin-top: 5%;
+        color: white;
+        font-size:23px;
+        width: 100vw;
+        text-align: left;
+        padding:0% 15%;
+    }
+}
