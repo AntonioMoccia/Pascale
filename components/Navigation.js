@@ -15,7 +15,7 @@ function Navigation() {
     setOpen(!open);
   };
   useEffect(()=>{
-    if(isMobile){
+    if(window.innerWidth<1023){
       setOpen(false)
       document.querySelector(".navigation-content").style.transform='translateY(-100%)'
       const items=document.querySelectorAll('.navigation-item')
@@ -49,7 +49,7 @@ function Navigation() {
 
   useEffect(() => {   
     const tl = gsap.timeline()
-    if(isMobile){
+    if(window.innerWidth<1024){
       if (open) {
         tl.to(".navigation-content", {
           y: '0%',

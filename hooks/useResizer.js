@@ -15,7 +15,7 @@ function useResizer() {
         setIsMobile(true);
       }
     });
-  }, []);
+  });
   return {
     isMobile,
   };
