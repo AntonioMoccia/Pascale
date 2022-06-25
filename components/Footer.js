@@ -23,6 +23,9 @@ const [data,setData] = useState({})
                 <FaInstagram className='instagram' />
                 </Link>
             </div>
+            <div className='powered'>
+            Powered by Antonio Moccia
+            </div>
         </div> 
     )
 }

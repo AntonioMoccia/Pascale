@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     @media screen and (max-width:1023px) {
         margin-top: 5vh;
         height: 20vh;
@@ -29,5 +30,12 @@
                 font-size:40px;
             }
         }
+    }
+    .powered{
+        color: white;
+        margin-top: 10%;
+        text-transform: uppercase;
+        font-weight: 100;
+        font-size: 9px;
     }
 }
