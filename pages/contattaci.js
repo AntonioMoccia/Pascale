@@ -82,7 +82,7 @@ function Contattaci({data}) {
   <p>{data.piva}</p>
           </div>
         </div>
-        <form onSubmit={sendEmail} ref={form} className="form-contatti">
+        <form onSubmit={()=>{}/* sendEmail */} ref={form} className="form-contatti">
           <label>Il tuo nome</label>
           <input type="text"  name="from_name" />
           <label>la tua email</label>
