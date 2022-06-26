@@ -3,15 +3,16 @@
     justify-content: center;
     height: 50vh;
     width: 100%;
-    overflow: hidden;
     @media (max-width:868px) {
+        height: 30vh;
         margin-top: 0vh;
     }
     .avatar-home-image{
-        @media (max-width:1023px) {
-            height: auto;
-            width: 90vw;
-        }
+        width: 50vw;
+        height: auto;
+        @media screen and (max-width:1023px) {
+             width: 90vw;
+         }
     }
  /*    .image{
         border-style: solid;
