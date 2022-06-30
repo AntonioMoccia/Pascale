@@ -4,7 +4,7 @@ import {client} from '../../prismic'
 export async function getServerSideProps({query}){
 
     const data = await client.getByUID("prodotto",query.uid)
-
+    
     return{
         props:{
             data:data.data

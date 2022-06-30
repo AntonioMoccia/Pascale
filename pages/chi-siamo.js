@@ -1,23 +1,19 @@
 import React, { useEffect } from "react";
-import Link from "next/link";
-import Section from "../components/Section";
-import Image from 'next/image'
-import gsap from 'gsap'
-import {client} from '../prismic'
+import Head from "next/head";
+import { client } from "../prismic";
 
-export async function getServerSideProps(){
-  const data = await client.getByType("chi-siamo")
+export async function getServerSideProps() {
+  const data = await client.getByType("chi-siamo");
 
-  return{
-    props:{
-      data:data.results[0].data
-    }
-  }
+  return {
+    props: {
+      data: data.results[0].data,
+    },
+  };
 }
 
-
-function about({data}) {
-/*useEffect(()=>{
+function about({ data }) {
+  /*useEffect(()=>{
   gsap.fromTo('.chi-siamo-img',{
     transformOrigin:"top",
     scaleY:0
@@ -27,16 +23,24 @@ function about({data}) {
   })
 },[])*/
   return (
-    <div className="chi-siamo-wrapper" data-scroll-section>
-        <div className="chi-siamo-image"  >
-    <img src={data.immagine.url} className="chi-siamo-img"  />
-
+    <>
+      <Head>
+        <title>{data.metatitle}</title>
+        <meta name="description" content={`${data.metadescription}`} />
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        ></meta>
+      </Head>
+      <div className="chi-siamo-wrapper" data-scroll-section>
+        <div className="chi-siamo-image">
+          <img src={data.immagine.url} className="chi-siamo-img" />
         </div>
 
-      <div className="chi-siamo-text" >
-       {data.testo[0].text}
+        <div className="chi-siamo-text">{data.testo[0].text}</div>
       </div>
-    </div>
+    </>
   );
 }
 
