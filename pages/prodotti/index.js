@@ -16,21 +16,6 @@ export async function getServerSideProps(){
 
 function prodotti({data}) {
 
-  const Prodotti = [
-    {
-      title: "Castagne fresche",
-      img: "/images/avatar1.jpeg",
-    },
-    {
-      title: "Castagne secche in guscio",
-      img: "/images/avatar1.jpeg",
-    },
-    {
-      title: "Castagne secche sgusciate",
-      img: "/images/avatar1.jpeg",
-    },
-  ];
-
   return (
     <>
           <Head>
@@ -48,8 +33,11 @@ function prodotti({data}) {
         
         if(index % 2 !== 0){
           return (
-            <Link href={data.hasDescription?`/prodotti/${data.uid}`:""} >
-            <div className="prodotto">
+            <Link href={data.hasDescription?`/prodotti/${data.uid}`:""}  >
+
+            <div className="prodotto" style={{
+              cursor:data.hasDescription &&  "pointer" 
+            }}>
               <div className="prodotto-image" data-scroll-speed='1' data-scroll>
                 <img src={data.image.url} />
               </div>
@@ -62,7 +50,10 @@ function prodotti({data}) {
           
         }else{
           return(
-            <div className="prodotto-reverse">
+            <Link href={data.hasDescription?`/prodotti/${data.uid}`:""} >
+            <div className="prodotto-reverse" style={{
+              cursor:data.hasDescription && "pointer" 
+            }} >
               <div className="prodotto-image" data-scroll-speed='-1.2' data-scroll>
                 <img src={data.image.url} />
               </div>
@@ -70,6 +61,7 @@ function prodotti({data}) {
                 <h1>{data.title}</h1>
               </div>
             </div>
+          </Link>
           )
         }
         
