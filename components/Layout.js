@@ -57,13 +57,18 @@ function Layout({ children }) {
       }
     });
   }, []);
+  useEffect(()=>{
+    const images = document.querySelectorAll('img')
+    const video = document.querySelectorAll('video')
+    console.log(images);
+  },[])
 
   return (
     <>
       <LocomotiveScrollProvider
         options={{
           smooth: true,
-          lerp: 0.09,
+          lerp: 0.05,
           multiplier:1.5,
           scrollFromAnywhere: true,
           reloadOnContextChange: true,

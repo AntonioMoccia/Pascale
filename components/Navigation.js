@@ -112,7 +112,7 @@ useEffect(()=>{
       <div className="navigation-wrapper">
         <div className="logo">
           <Link href="/">
-            <img alt="logo" className="logo-img" src={"/PascaleLogo.png"} />
+            <img alt="logo" className="logo-img" src={"/PascaleLogoBianco.png"} />
           </Link>
         </div>
         <div className="navigation-content">
