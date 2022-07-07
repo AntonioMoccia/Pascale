@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { FaBeer } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillTelephoneFill } from "react-icons/bs";
@@ -6,6 +6,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
 import { client } from "../prismic";
 import Head from "next/head";
+import { Alert, CircularProgress, lighten } from "@mui/material";
 export async function getServerSideProps() {
   const data = await client.getByType("contattaci");
 
@@ -19,9 +20,16 @@ export async function getServerSideProps() {
 function Contattaci({ data }) {
 
   const form = useRef();
+  const buttonRef = useRef()
+  const [sending,setSending] = useState(false)
 
+  
   const sendEmail = (e) => {
+    
+setSending(true)
+
     e.preventDefault();
+    setSending(true)
     emailjs
       .sendForm(
         "service_98v50nf",
@@ -31,10 +39,12 @@ function Contattaci({ data }) {
       )
       .then(
         (result) => {
-          console.log(result);
+          setSending(false)
+          buttonRef.current.innerHTML="Email inviata"
         },
         (error) => {
-          console.log(error);
+          setSending(false)
+          buttonRef.current.innerHTML="Qualcosa è andato storto"
         }
       );
   };
@@ -84,9 +94,10 @@ function Contattaci({ data }) {
             <input type="email" name="user_email" />
             <label>Messaggio</label>
             <textarea name="message" />
-            <button type="submit">Invia</button>
+            <button type="submit" ref={buttonRef}>{sending ? <CircularProgress sx={{color:"black"}}  /> : "Invia"}</button>
           </form>
         </div>
+
       </div>
     </>
   );

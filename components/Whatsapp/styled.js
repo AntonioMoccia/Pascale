@@ -6,6 +6,7 @@ export const WhatsappWrapper = styled.div`
     right:-2%;
     bottom: 1%;
     z-index: 10000;
+    background-color:black ;
     ._1bpcM{
         background-color:black;
         color:white
