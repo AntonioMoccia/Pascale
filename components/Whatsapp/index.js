@@ -13,9 +13,9 @@ const Whatsapp = ()=>{
             setContact(res.data)
         },[])
     return(
-        <WhatsappWrapper>
+        <div className='whatsapp'>
         <WhatsAppWidget textReplyTime='' phoneNumber = {`+39 ${contact.tel}`} placeholder='Inserisci il messaggio' companyName='Pascale castagne' message='Ciao! 👋🏼  Come posso aiutarti?' sendButton='Invia'/>
-        </WhatsappWrapper>
+        </div>
     )
 }
 

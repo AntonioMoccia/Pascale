@@ -9,6 +9,8 @@ export const WhatsappWrapper = styled.div`
     background-color:black ;
     ._1bpcM{
         background-color:black;
-        color:white
+        color:white;
+
     }
 `
+

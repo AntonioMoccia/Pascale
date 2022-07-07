@@ -40,11 +40,11 @@ setSending(true)
       .then(
         (result) => {
           setSending(false)
-          buttonRef.current.innerHTML="Email inviata"
+       
         },
         (error) => {
           setSending(false)
-          buttonRef.current.innerHTML="Qualcosa è andato storto"
+          
         }
       );
   };
