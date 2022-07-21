@@ -31,7 +31,13 @@ main{
     flex-direction: column;
     overflow: hidden;
     @media (max-width:1023px) {
-        height: 50vh;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content:center;
+        padding-top: 6rem;
+
     }
 }
 body{

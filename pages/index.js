@@ -1,7 +1,7 @@
 import Head from "next/head";
 import {useEffect,useState} from 'react'
 import { client } from '../prismic'
-
+import {RichText} from 'prismic-reactjs'
 export async function getServerSideProps(){
   const data = await client.getByType("home")
   return{
@@ -12,8 +12,10 @@ export async function getServerSideProps(){
 }
 
 export default function Home({data}) {
-  const [homeData,setHomeData] = useState([])
-
+  const [homeData,setHomeData] = useState(false)
+useEffect(()=>{
+  setHomeData(true)
+},[])
   return (
     <>
     <Head>
@@ -48,7 +50,9 @@ export default function Home({data}) {
     </div>
     <div className="section-footer" data-scroll-section>
       <p className="section-footer-text"  data-scroll >
-        {data.frase}
+  {
+    homeData && <RichText render={data.frase} />
+  }        
       </p>
     </div>
   </>

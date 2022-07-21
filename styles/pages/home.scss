@@ -1,17 +1,16 @@
 
 .video-hero{
     width: 100%;
-    min-height: 100vh;
     position: absolute;
     top:0;
     left: 0;
     z-index: 2;
+    
     @media (max-width:1023px) {
-        padding: 0% 0%;
-        height: 100vh;
-        width: auto;
+        min-height: 0;
+        width: 90%;
         position: relative;
-        margin-top: 0rem;
+        margin-left: 5%;
     }
 
 }
@@ -24,7 +23,9 @@
     padding: 0 10%;
     @media (max-width:1023px) {
         margin-top: 0%;
-        height: auto;
+        height: 50vh;
+        
+        min-height: 0;
     }
 }
 
@@ -40,7 +41,7 @@
     }
     .section-footer-text{
         color: white;
-        font-size: 6vw;
+        font-size: 5vw;
         width: 100%;
         text-align: center;
         text-transform: uppercase;
