@@ -13,7 +13,7 @@ export async function getServerSideProps() {
   };
 }
 
-function about({ data }) {
+function About({ data }) {
   const [loaded,setLoaded]  = useState(false)
   /*useEffect(()=>{
   gsap.fromTo('.chi-siamo-img',{
@@ -53,4 +53,4 @@ setLoaded(true)
   );
 }
 
-export default about;
+export default About;
