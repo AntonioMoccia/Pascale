@@ -32,6 +32,10 @@
             position:relative;
             left:-7vw;
             letter-spacing: 5px;
+            text-transform: uppercase;
+            .link-product{
+                text-decoration:overline
+            }
             @media screen and (max-width:1023px) {
                 left:0;
                 }
@@ -58,6 +62,7 @@
         &:not(:first-child){
             margin-top: 20vh;
         }
+
         .prodotto-title{
             color:white;
             display: flex;
@@ -70,6 +75,7 @@
                 left:0;
                 
                 }
+    
             h1{ 
                 font-size: 5em;
                 text-align: right;

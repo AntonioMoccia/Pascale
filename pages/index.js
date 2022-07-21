@@ -50,9 +50,9 @@ useEffect(()=>{
     </div>
     <div className="section-footer" data-scroll-section>
       <p className="section-footer-text"  data-scroll >
-  {
-    homeData && <RichText render={data.frase} />
-  }        
+    {
+      homeData && <RichText render={data.frase} />
+    }        
       </p>
     </div>
   </>

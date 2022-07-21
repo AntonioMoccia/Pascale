@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import {client} from '../../prismic'
 import Link from 'next/link'
 import Head from "next/head";
+import gsap from "gsap";
 export async function getServerSideProps(){
   const data = await client.getByType("prodotti",{
     fetchLinks: ['prodotto.title','prodotto.image','prodotto.uid','prodotto.hasDescription'],
@@ -34,14 +35,26 @@ function prodotti({data}) {
         if(index % 2 !== 0){
           return (
             <Link href={data.hasDescription?`/prodotti/${data.uid}`:""}  >
-
             <div className="prodotto" style={{
               cursor:data.hasDescription &&  "pointer" 
+            }}  onMouseOver={()=>{
+              if(data.hasDescription){
+                document.querySelector('.cursor').innerText='Show more'
+                gsap.to('.cursor',{
+                  scale:1.2
+                }) 
+              }
+          }}
+            onMouseOut={()=>{
+              document.querySelector('.cursor').innerText=''
+              gsap.to('.cursor',{
+                scale:1
+              })
             }}>
               <div className="prodotto-image" data-scroll-speed='1' data-scroll>
                 <img src={data.image.url} />
               </div>
-              <div className="prodotto-title"  data-scroll>
+              <div className={data.hasDescription ? 'link-product prodotto-title' : 'prodotto-title'}  data-scroll>
                 <h1>{data.title}</h1>
               </div>                
             </div>
@@ -53,11 +66,24 @@ function prodotti({data}) {
             <Link href={data.hasDescription?`/prodotti/${data.uid}`:""} >
             <div className="prodotto-reverse" style={{
               cursor:data.hasDescription && "pointer" 
-            }} >
+            }} onMouseOver={()=>{
+              if(data.hasDescription){
+                document.querySelector('.cursor').innerText='Show more'
+                gsap.to('.cursor',{
+                  scale:1.2
+                }) 
+              }
+          }}
+            onMouseOut={()=>{
+              document.querySelector('.cursor').innerText=''
+              gsap.to('.cursor',{
+                scale:1
+              })
+            }}>
               <div className="prodotto-image" data-scroll-speed='-1.2' data-scroll>
                 <img src={data.image.url} />
               </div>
-              <div className="prodotto-title"  data-scroll>
+              <div className={data.hasDescription ? 'link-product prodotto-title' : 'prodotto-title'}  data-scroll>
                 <h1>{data.title}</h1>
               </div>
             </div>

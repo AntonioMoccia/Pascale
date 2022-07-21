@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import { client } from "../prismic";
+import { PrismicRichText } from "@prismicio/react";
 
 export async function getServerSideProps() {
   const data = await client.getByType("chi-siamo");
@@ -13,6 +14,7 @@ export async function getServerSideProps() {
 }
 
 function about({ data }) {
+  const [loaded,setLoaded]  = useState(false)
   /*useEffect(()=>{
   gsap.fromTo('.chi-siamo-img',{
     transformOrigin:"top",
@@ -22,6 +24,9 @@ function about({ data }) {
     duration:0.5
   })
 },[])*/
+useEffect(()=>{
+setLoaded(true)
+},[])
   return (
     <>
       <Head>
@@ -38,7 +43,11 @@ function about({ data }) {
           <img src={data.immagine.url} className="chi-siamo-img" />
         </div>
 
-        <div className="chi-siamo-text">{data.testo[0].text}</div>
+        <div className="chi-siamo-text">
+          {
+            loaded && <PrismicRichText field={data.testo} />
+          }
+          </div>
       </div>
     </>
   );
