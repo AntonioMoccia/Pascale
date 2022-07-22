@@ -47,7 +47,7 @@ function Navigation() {
     })
   },[])
 
-  useEffect(() => {   
+   useEffect(() => {   
     const tl = gsap.timeline()
     if(window.innerWidth<1024){
       if (open) {
@@ -79,10 +79,10 @@ function Navigation() {
         
       }
     }
-  }, [open]);
+  }, [open]); 
   
 
-useEffect(()=>{
+/* useEffect(()=>{
   if(scroll.isReady){    
     scroll.scroll.on("scroll",(istance)=>{
       if(!isMobile){
@@ -105,7 +105,7 @@ useEffect(()=>{
   }
 
 
-},[scroll.isReady])
+},[scroll.isReady]) */
 
   return (
     <>
