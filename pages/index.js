@@ -2,7 +2,7 @@ import Head from "next/head";
 import {useEffect,useState} from 'react'
 import { client } from '../prismic'
 import {RichText} from 'prismic-reactjs'
-export async function getServerSideProps(){
+export async function getStaticProps(){
   const data = await client.getByType("home")
   return{
     props:{

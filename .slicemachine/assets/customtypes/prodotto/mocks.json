@@ -1,6 +1,6 @@
 {
-  "id": "a24d37a9-0afa-45b9-a7ff-abd9e597becb",
-  "uid": "hic-sequi-aut",
+  "id": "52790aa0-5356-46f6-b500-378c5f242ed8",
+  "uid": "quidem-est-qui",
   "type": "prodotto",
   "data": {
     "image": {
@@ -10,18 +10,33 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=900&h=500&fit=crop"
     },
-    "title": "generate value-added bandwidth",
-    "hasDescription": true,
+    "title": "transition vertical web services",
+    "hasDescription": false,
     "description": [
       {
+        "type": "heading1",
+        "text": "Engage killer niches",
+        "spans": []
+      },
+      {
+        "type": "image",
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
+      },
+      {
         "type": "paragraph",
-        "text": "Occaecat nostrud occaecat dolore anim sint nostrud labore eiusmod commodo consequat aute labore. Esse anim aute eu ad consequat laboris consectetur. Laborum Lorem labore laborum.",
+        "text": "Mollit ut voluptate velit et amet culpa labore est labore. Aliquip non Lorem aute laborum aliquip id adipisicing ad quis enim proident tempor. Sunt laborum exercitation ipsum consequat cupidatat est et ad ullamco voluptate enim fugiat consectetur nostrud.",
         "spans": []
       }
     ],
-    "metatitle": "innovate wireless initiatives",
-    "metadescription": "incubate wireless synergies"
+    "metatitle": "generate transparent platforms",
+    "metadescription": "incentivize extensible mindshare"
   }
 }

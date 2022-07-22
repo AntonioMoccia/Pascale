@@ -7,7 +7,7 @@ import emailjs from "@emailjs/browser";
 import { client } from "../prismic";
 import Head from "next/head";
 import { Alert, CircularProgress, lighten } from "@mui/material";
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const data = await client.getByType("contattaci");
 
   return {

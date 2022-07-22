@@ -3,7 +3,14 @@
     "home": {},
     "chi-siamo": {},
     "contattaci": {},
-    "prodotto": {},
+    "prodotto": {
+      "description": {
+        "config": {
+          "patternType": "STORY",
+          "blocks": 1
+        }
+      }
+    },
     "prodotti": {},
     "social": {}
   },

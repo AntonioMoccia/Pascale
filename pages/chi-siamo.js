@@ -3,7 +3,7 @@ import Head from "next/head";
 import { client } from "../prismic";
 import { PrismicRichText } from "@prismicio/react";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const data = await client.getByType("chi-siamo");
 
   return {
