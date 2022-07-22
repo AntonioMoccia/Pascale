@@ -27,7 +27,7 @@ function Prodotti({ data }) {
   return (
     <>
       <Head>
-        <title>I nostri prodotti</title>
+        <title>Pascale castagne - Prodotti</title>
         <meta name="description" content="I nostri prodotti" />
         <link rel="icon" href="/favicon.ico" />
         <meta
