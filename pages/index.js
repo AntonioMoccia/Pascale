@@ -28,9 +28,15 @@ useEffect(()=>{
       ></meta>
     </Head>
     <div data-scroll-section className="section">
-
+    <div className="section-avatar" data-scroll-section>       
+     <div className='avatar-home'>
+            <img className='avatar-home-image'  src={data.avatar.url}  />
+      </div>
+    </div>
+       {/*
       <div className="video-wrapper"   >
-        <video
+
+          <video
           id="video-hero-id"
           className="video-hero"
           autoPlay
@@ -39,21 +45,23 @@ useEffect(()=>{
           playsInline
           >
           <source src={data.video.url} />
-        </video>
+        </video> 
       </div>
+        */}
           </div>
 
-    <div className="section-avatar" data-scroll-section>       
-     <div className='avatar-home'>
-            <img className='avatar-home-image'  src={data.avatar.url}  />
-      </div>
-    </div>
+
     <div className="section-footer" data-scroll-section>
       <p className="section-footer-text"  data-scroll >
     {
       homeData && <RichText render={data.frase} />
     }        
       </p>
+    </div>
+    <div className="section-avatar" data-scroll-section>       
+     <div className='avatar-home'>
+            <img className='avatar-home-image'  src={data.avatar.url}  />
+      </div>
     </div>
   </>
   );
