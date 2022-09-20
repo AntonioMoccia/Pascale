@@ -6,6 +6,8 @@ import { useRouter } from "next/router";
 import MenuItem from "./MenuItem";
 import useResizer from '../hooks/useResizer'
 import {useLocomotiveScroll} from 'react-locomotive-scroll'
+import NavLink from "./NavLink";
+
 function Navigation() {
   const [open, setOpen] = useState(false);
   const scroll = useLocomotiveScroll()
@@ -82,61 +84,38 @@ function Navigation() {
   }, [open]); 
   
 
-/* useEffect(()=>{
-  if(scroll.isReady){    
-    scroll.scroll.on("scroll",(istance)=>{
-      if(!isMobile){
-      if(Math.round(istance.scroll.y)!==0){            
-              gsap.to(".navigation-wrapper",{
-                marginTop:'0%',
-                width:"100%",
-                marginLeft:"0%",
-              })
-          }
-          else{
-            gsap.to(".navigation-wrapper",{
-              marginTop:'4%',
-              width:"90%",
-              marginLeft:"5%"
-            })
-          }
-        }
-    })
-  }
-
-
-},[scroll.isReady]) */
 
   return (
     <>
       <div className="navigation-wrapper">
         <div className="logo">
-          <Link href="/">
+          <NavLink href={'/'}>
             <img alt="logo" className="logo-img" src={"/PascaleLogoBianco.png"} />
-          </Link>
+          </NavLink>
+          
         </div>
         <div className="navigation-content">
           <ul className="navigation-list">
-            <Link href="/" className="navigation-link">
+            <NavLink href="/">
               <li className="navigation-item">
                 <MenuItem> Home</MenuItem>
               </li>
-            </Link>
-            <Link href="/chi-siamo" className="navigation-link">
+            </NavLink>
+            <NavLink href="/chi-siamo" >
               <li className="navigation-item">
                 <MenuItem>Chi siamo</MenuItem>
               </li>
-            </Link>
-            <Link href="/prodotti" className="navigation-link">
+            </NavLink>
+            <NavLink href="/prodotti" >
               <li className="navigation-item">
                 <MenuItem>Prodotti</MenuItem>
               </li>
-            </Link>
-            <Link href="/contattaci" className="navigation-link">
+            </NavLink>
+            <NavLink href="/contattaci" >
               <li className="navigation-item">
                 <MenuItem>Contattaci</MenuItem>
               </li>
-            </Link>
+            </NavLink>
           </ul>
         </div>
         <div className="burger" onClick={handleToggleMenu}>
