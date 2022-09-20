@@ -14,6 +14,7 @@ export async function getStaticProps(){
 export default function Home({data}) {
   const [homeData,setHomeData] = useState(false)
 useEffect(()=>{
+  console.log(data);
   setHomeData(true)
 },[])
   return (
@@ -30,7 +31,7 @@ useEffect(()=>{
     <div data-scroll-section className="section">
     <div className="section-avatar" data-scroll-section>       
      <div className='avatar-home'>
-            <img className='avatar-home-image'  src={data.avatar.url}  />
+            <img className='avatar-home-image' alt={data.avatar.alt} src={data.avatar.url}  />
       </div>
     </div>
        {/*
@@ -60,7 +61,7 @@ useEffect(()=>{
     </div>
     <div className="section-avatar" data-scroll-section>       
      <div className='avatar-home'>
-            <img className='avatar-home-image'  src={data.avatar.url}  />
+            <img className='avatar-home-image' alt={data.avatar.alt}  src={data.avatar.url}  />
       </div>
     </div>
   </>

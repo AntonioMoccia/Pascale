@@ -62,7 +62,7 @@ setSending(true)
       </Head>
       <div className="contattaci-wrapper" data-scroll-section>
         <div className="contattaci-media-container">
-          <img src="/images/avatar1.jpeg" className="contattaci-media" />
+          <img src="/images/avatar1.jpeg"  className="contattaci-media" />
         </div>
         <div className="contatti-container">
           <div className="contatto">

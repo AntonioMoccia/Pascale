@@ -40,7 +40,7 @@ setLoaded(true)
       </Head>
       <div className="chi-siamo-wrapper" data-scroll-section>
         <div className="chi-siamo-image">
-          <img src={data.immagine.url} className="chi-siamo-img" />
+          <img src={data.immagine.url} alt={data.immagine.alt} className="chi-siamo-img" />
         </div>
 
         <div className="chi-siamo-text">
