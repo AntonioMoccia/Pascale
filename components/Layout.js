@@ -68,8 +68,8 @@ function Layout({ children }) {
       <LocomotiveScrollProvider
         options={{
           smooth: true,
-          lerp: 0.05,
-          multiplier:1.5,
+          lerp:.07,
+          multiplier:1,
           scrollFromAnywhere: true,
           reloadOnContextChange: true,
           tablet: { smooth: true  },
