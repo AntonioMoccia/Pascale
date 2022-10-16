@@ -65,32 +65,7 @@ function Layout({ children }) {
 
   return (
     <>
-      <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          lerp:.07,
-          multiplier:1,
-          scrollFromAnywhere: true,
-          reloadOnContextChange: true,
-          tablet: { smooth: true  },
-          smartphone: { smooth: true },
-        }}
-        watch={["router.asPath"]}
-        location={asPath}
-        containerRef={containerRef}
-        onLocationChange={(scroll) => {
-          scroll.scrollTo(0, { duration: 0, disableLerp: true });
-          document.querySelectorAll(".c-scrollbar")[0].style.display = "none";
-          //        scroll.start();
-          //        router.reload(window.location.pathname)
-        }} // If you want to reset the scroll position to 0 for example
-        onUpdate={(scroll) => {
-          const el = document.querySelectorAll(".c-scrollbar");
-          if (el.length > 0) {
-            el[0].style.display = "none";
-          }
-        }}
-      >
+   
         <Cursor />
         <Navigation />
         <main>
@@ -99,7 +74,6 @@ function Layout({ children }) {
             <Footer />
           </div>
         </main>
-      </LocomotiveScrollProvider>
         <Whatsapp />
     </>
   );
