@@ -38,7 +38,7 @@ setLoaded(true)
           content="width=device-width, initial-scale=1"
         ></meta>
       </Head>
-      <div className="chi-siamo-wrapper" data-scroll-section>
+      <div className="chi-siamo-wrapper" >
         <div className="chi-siamo-image">
           <img src={data.immagine.url} alt={data.immagine.alt} className="chi-siamo-img" />
         </div>

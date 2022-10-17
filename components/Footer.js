@@ -14,7 +14,7 @@ const [data,setData] = useState({})
 
     return (
 
-         <div className='footer-wrapper' data-scroll-section>
+         <div className='footer-wrapper' >
             <div className='social'>
                 <Link href={data.facebook ? data.facebook : "" }>
                 <FaFacebook className='facebook' />

@@ -35,7 +35,7 @@ function Prodotti({ data }) {
           content="width=device-width, initial-scale=1"
         ></meta>
       </Head>
-      <div className="prodotti-wrapper" data-scroll-section>
+      <div className="prodotti-wrapper" >
         {
         data.map((prod) => {
           return (

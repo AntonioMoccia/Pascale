@@ -28,8 +28,8 @@ useEffect(()=>{
         content="width=device-width, initial-scale=1"
       ></meta>
     </Head>
-    <div data-scroll-section className="section">
-    <div className="section-avatar" data-scroll-section>       
+    <div className="section">
+    <div className="section-avatar" >       
      <div className='avatar-home'>
             <img className='avatar-home-image' alt={data.avatar.alt} src={data.avatar.url}  />
       </div>
@@ -52,14 +52,14 @@ useEffect(()=>{
           </div>
 
 
-    <div className="section-footer" data-scroll-section>
-      <p className="section-footer-text"  data-scroll >
+    <div className="section-footer" >
+      <p className="section-footer-text"  >
     {
       homeData && <RichText render={data.frase} />
     }        
       </p>
     </div>
-    <div className="section-avatar" data-scroll-section>       
+    <div className="section-avatar" >       
      <div className='avatar-home'>
             <img className='avatar-home-image' alt={data.avatar.alt}  src={data.avatar.url}  />
       </div>

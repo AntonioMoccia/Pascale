@@ -16,7 +16,7 @@
         }
     }
     .contatti-container{
-        width: 100vw;
+        width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -31,7 +31,7 @@
             display: flex;
             justify-content: center;
             @media screen and (max-width:1023px) {
-                width: 100vw;
+                width: 100%;
                 justify-content: center;
                 
             }
@@ -59,7 +59,7 @@
         }
         .form-contatti{
             height: auto;
-            width: 100vw;
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-around;

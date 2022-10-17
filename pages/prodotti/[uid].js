@@ -23,7 +23,7 @@ const Prodotto = ({ data }) => {
           content="width=device-width, initial-scale=1"
         ></meta>
       </Head>
-      <div className="prodotto-wrapper" data-scroll-section>
+      <div className="prodotto-wrapper" >
         <img src={data.image.url} className="prodotto-image" />
         <h1 className="prodotto-title">{data.title}</h1>
         <p className="prodotto-description">{data.description[0].text}</p>

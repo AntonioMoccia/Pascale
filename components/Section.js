@@ -6,7 +6,7 @@ function Section({children}) {
        // console.log(scroll);
     },[scroll])
   return (
-    <div className='section' data-scroll-section>{children}</div>
+    <div className='section' >{children}</div>
   )
 }
 

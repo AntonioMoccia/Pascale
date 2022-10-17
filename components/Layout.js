@@ -6,7 +6,7 @@ import useResizer from "../hooks/useResizer";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import Cursor from "./cursor";
 import Footer from "./Footer";
-import Whatsapp from './Whatsapp'
+import Whatsapp from "./Whatsapp";
 
 function Layout({ children }) {
   const containerRef = useRef(null);
@@ -27,7 +27,6 @@ function Layout({ children }) {
   useEffect(() => {
     if (typeof window == "undefined") return;
     window.addEventListener("mousemove", (e) => {
-
       gsap.to(".cursor", {
         y: e.clientY,
         x: e.clientX,
@@ -35,8 +34,6 @@ function Layout({ children }) {
     });
 
     events.on("routeChangeStart", () => {
-
-
       if (window.innerWidth > 1023) {
         document.body.style.opacity = 0;
       } else {
@@ -57,24 +54,15 @@ function Layout({ children }) {
       }
     });
   }, []);
-  useEffect(()=>{
-    const images = document.querySelectorAll('img')
-    const video = document.querySelectorAll('video')
-    console.log(images);
-  },[])
 
   return (
     <>
-   
+      <main>
         <Cursor />
         <Navigation />
-        <main>
-          <div ref={containerRef} data-scroll-container>
-            {children}
-            <Footer />
-          </div>
-        </main>
-        <Whatsapp />
+        <div ref={containerRef}>{children}</div>
+        <Footer />
+      </main>
     </>
   );
 }

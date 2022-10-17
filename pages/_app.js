@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import "locomotive-scroll/src/locomotive-scroll.scss";
+
 import "../styles/index.scss"
 
 import Layout from "../components/Layout";
