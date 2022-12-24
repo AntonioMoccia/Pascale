@@ -24,7 +24,6 @@ const [data,setData] = useState({})
                 </Link>
             </div>
             <div className='powered'>
-            Powered by Antonio Moccia
             </div>
         </div> 
     )
